@@ -1688,37 +1688,37 @@ Looking at this plugin:
    associated aquatic ecosystems” (IPBES, 2018)
 
 .. |image1| image:: media_QGIS_new/image1.png
-   :width: 6in
+   :width: 10in
 .. |image2| image:: media_QGIS_new/image2.png
-   :width: 6in
+   :width: 10in
 .. |image3| image:: media_QGIS_new/image3.png
-   :width: 6in
+   :width: 10in
 .. |image4| image:: media_QGIS_new/image4.png
-   :width: 6in
+   :width: 10in
 .. |image5| image:: media_QGIS_new/image5.png
-   :width: 6in
+   :width: 10in
 .. |image6| image:: media_QGIS_new/image6.png
-   :width: 6in
+   :width: 10in
 .. |image7| image:: media_QGIS_new/image7.png
-   :width: 6in
+   :width: 10in
 .. |image8| image:: media_QGIS_new/image8.png
-   :width: 6in
+   :width: 10in
 .. |image9| image:: media_QGIS_new/image9.png
-   :width: 6in
+   :width: 10in
 .. |image10| image:: media_QGIS_new/image10.png
-   :width: 6in
+   :width: 10in
 .. |image11| image:: media_QGIS_new/image11.png
-   :width: 6in
+   :width: 10in
 .. |image12| image:: media_QGIS_new/image12.png
-   :width: 6in
+   :width: 10in
 .. |image13| image:: media_QGIS_new/image13.png
-   :width: 6in
+   :width: 10in
 .. |image14| image:: media_QGIS_new/image14.png
-   :width: 6in
+   :width: 10in
 .. |image15| image:: media_QGIS_new/image15.png
-   :width: 6in
+   :width: 10in
 .. |image16| image:: media_QGIS_new/image16.png
-   :width: 6in
+   :width: 10in
 .. |image17| image:: media_QGIS_new/image17.png
    :width: 6in
 .. |image9| image:: media_QGIS_new/image9.png
