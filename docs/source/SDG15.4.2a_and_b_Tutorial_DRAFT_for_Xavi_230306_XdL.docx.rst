@@ -1824,9 +1824,9 @@ Looking at this plugin:
 .. |image66| image:: media_QGIS_new/image66.png
    :width: 1200
 .. |image67| image:: media_QGIS_new/image67.png
-   :width: 800
+   :width: 600
 .. |image68| image:: media_QGIS_new/image68.png
-   :width: 1000
+   :width: 600
 .. |image69| image:: media_QGIS_new/image69.png
    :width: 1200
 .. |image70| image:: media_QGIS_new/image70.png
