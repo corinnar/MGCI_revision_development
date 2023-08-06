@@ -1,4 +1,4 @@
-QGIS-MGCI: Pilot testing of SDG Indicator 15.4.2 :sub:`beta`
+QGIS-MGCI: Pilot testing of SDG Indicator 15.4.2 :sub:`gamma`
 =============================================================
 A QGIS-based workflow to support the computation of SDG Indicator 15.4.2, which includes sub-indicator a (Mountain Green Cover Index) and sub-indicator b (Proportion of degraded mountain land)
 
@@ -23,7 +23,7 @@ If you have specific bugs to report or improvements to the tool that you would l
 Authors 
 ^^^^^^^
 
-QGIS-MGCI :sub:`beta` has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations. Contributors to QGIS-MGCI :sub:`beta` and its documentation include Corinna Ravilious, Vignesh Kamath Cannanure, Boipelo Tshwene-Mauchaza, Cristina Telhado and Valerie Kapos. 
+QGIS-MGCI :sub:`gamma` has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations. Contributors to QGIS-MGCI :sub:`gamma` and its documentation include Corinna Ravilious, Vignesh Kamath Cannanure, Boipelo Tshwene-Mauchaza, Cristina Telhado and Valerie Kapos. 
 
 License
 ^^^^^^^
@@ -1688,317 +1688,212 @@ Looking at this plugin:
    associated aquatic ecosystems” (IPBES, 2018)
 
 .. |image1| image:: media_QGIS_new/image1.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image2| image:: media_QGIS_new/image2.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image3| image:: media_QGIS_new/image3.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image4| image:: media_QGIS_new/image4.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image5| image:: media_QGIS_new/image5.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image6| image:: media_QGIS_new/image6.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image7| image:: media_QGIS_new/image7.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image8| image:: media_QGIS_new/image8.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image9| image:: media_QGIS_new/image9.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image10| image:: media_QGIS_new/image10.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image11| image:: media_QGIS_new/image11.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image12| image:: media_QGIS_new/image12.png
-   :width: 6in
-   :height: 5in
+   :width: 400
 .. |image13| image:: media_QGIS_new/image13.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image14| image:: media_QGIS_new/image14.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image15| image:: media_QGIS_new/image15.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image16| image:: media_QGIS_new/image16.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image17| image:: media_QGIS_new/image17.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image9| image:: media_QGIS_new/image9.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image18| image:: media_QGIS_new/image18.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image19| image:: media_QGIS_new/image19.png
-   :width: 6in
-   :height: 5in
+   :width: 600
 .. |image20| image:: media_QGIS_new/image20.png
-   :width: 6in
-   :height: 5in
+   :width: 600
 .. |image21| image:: media_QGIS_new/image21.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image12| image:: media_QGIS_new/image12.png
-   :width: 6in
-   :height: 5in
+   :width: 400
 .. |image22| image:: media_QGIS_new/image22.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image23| image:: media_QGIS_new/image23.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image24| image:: media_QGIS_new/image24.png
-   :width: 6in
-   :height: 5in
+   :width: 1000
 .. |image25| image:: media_QGIS_new/image25.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image26| image:: media_QGIS_new/image26.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image27| image:: media_QGIS_new/image27.png
-   :width: 6in
-   :height: 5in
+   :width: 400
 .. |image28| image:: media_QGIS_new/image28.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image29| image:: media_QGIS_new/image29.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image30| image:: media_QGIS_new/image30.png
-   :width: 6in
-   :height: 5in
+   :width: 600
 .. |image31| image:: media_QGIS_new/image31.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image32| image:: media_QGIS_new/image32.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image33| image:: media_QGIS_new/image33.png
-    :width: 6in
-   :height: 5in
+    :width: 1200
 .. |image34| image:: media_QGIS_new/image34.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image35| image:: media_QGIS_new/image35.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image36| image:: media_QGIS_new/image36.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image37| image:: media_QGIS_new/image37.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image38| image:: media_QGIS_new/image38.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image39| image:: media_QGIS_new/image39.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image40| image:: media_QGIS_new/image40.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image41| image:: media_QGIS_new/image41.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image42| image:: media_QGIS_new/image42.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image43| image:: media_QGIS_new/image43.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image44| image:: media_QGIS_new/image44.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image45| image:: media_QGIS_new/image45.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image46| image:: media_QGIS_new/image46.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image47| image:: media_QGIS_new/image47.png
-    :width: 6in
-   :height: 5in
+    :width: 600
 .. |image48| image:: media_QGIS_new/image48.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image49| image:: media_QGIS_new/image49.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image50| image:: media_QGIS_new/image50.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image51| image:: media_QGIS_new/image51.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image52| image:: media_QGIS_new/image52.png
-   :width: 6in
-   :height: 5in
+   :width: 400
 .. |image53| image:: media_QGIS_new/image53.png
-   :width: 6in
-   :height: 5in
+   :width: 1000
 .. |image54| image:: media_QGIS_new/image54.png
-   :width: 6in
-   :height: 5in
+   :width: 1000
 .. |image55| image:: media_QGIS_new/image55.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image56| image:: media_QGIS_new/image56.png
-    :width: 6in
-   :height: 5in
+    :width: 1200
 .. |image57| image:: media_QGIS_new/image57.png
-   :width: 6in
-   :height: 5in
+   :width: 400
 .. |image58| image:: media_QGIS_new/image58.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image59| image:: media_QGIS_new/image59.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image60| image:: media_QGIS_new/image60.png
-   :width: 6in
-   :height: 5in
+   :width: 1000
 .. |image61| image:: media_QGIS_new/image61.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image62| image:: media_QGIS_new/image62.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image63| image:: media_QGIS_new/image63.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image64| image:: media_QGIS_new/image64.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image65| image:: media_QGIS_new/image65.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image66| image:: media_QGIS_new/image66.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image67| image:: media_QGIS_new/image67.png
-   :width: 6in
-   :height: 5in
+   :width: 600
 .. |image68| image:: media_QGIS_new/image68.png
-   :width: 6in
-   :height: 5in
+   :width: 600
 .. |image69| image:: media_QGIS_new/image69.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image70| image:: media_QGIS_new/image70.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image71| image:: media_QGIS_new/image71.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image72| image:: media_QGIS_new/image72.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image73| image:: media_QGIS_new/image73.png
-     :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image74| image:: media_QGIS_new/image74.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image75| image:: media_QGIS_new/image75.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image76| image:: media_QGIS_new/image76.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image77| image:: media_QGIS_new/image77.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image52| image:: media_QGIS_new/image52.png
-   :width: 6in
-   :height: 5in
+   :width: 600
 .. |image78| image:: media_QGIS_new/image78.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image79| image:: media_QGIS_new/image79.png
-   :width: 6in
-   :height: 5in
+   :width:1200
 .. |image80| image:: media_QGIS_new/image80.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image81| image:: media_QGIS_new/image81.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image82| image:: media_QGIS_new/image82.png
-   :width: 6in
-   :height: 5in
+   :width: 800
 .. |image83| image:: media_QGIS_new/image83.png
-   :width: 6in
-   :height: 5in
+   :width: 1000
 .. |image84| image:: media_QGIS_new/image84.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image85| image:: media_QGIS_new/image85.png
-   :width: 6in
-   :height: 5in
+   :width: 800
 .. |image86| image:: media_QGIS_new/image86.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image87| image:: media_QGIS_new/image87.png
-    :width: 6in
-   :height: 5in
+    :width: 1200
 .. |image88| image:: media_QGIS_new/image88.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image89| image:: media_QGIS_new/image89.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image90| image:: media_QGIS_new/image90.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image91| image:: media_QGIS_new/image91.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image92| image:: media_QGIS_new/image92.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image93| image:: media_QGIS_new/image93.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image94| image:: media_QGIS_new/image94.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image95| image:: media_QGIS_new/image95.png
-    :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image96| image:: media_QGIS_new/image96.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image97| image:: media_QGIS_new/image97.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image98| image:: media_QGIS_new/image98.png
-    :width: 6in
-   :height: 5in
+    :width: 1200
 .. |image99| image:: media_QGIS_new/image99.png
-    :width: 6in
-   :height: 5in
+    :width: 1200
 .. |image100| image:: media_QGIS_new/image100.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image101| image:: media_QGIS_new/image101.png
-   :width: 6in
-   :height: 5in
+   :width: 1200
 .. |image102| image:: media_QGIS_new/image102.png
-   :width: 6in
-   :height: 5in
+   :width: 1200

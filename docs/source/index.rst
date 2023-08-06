@@ -12,6 +12,5 @@ Contents
    overview
    defineenvs
    qgis
-   r
    sepal
    annex
