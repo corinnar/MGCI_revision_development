@@ -1738,13 +1738,13 @@ Looking at this plugin:
 .. |image23| image:: media_QGIS_new/image23.png
    :width: 1200
 .. |image24| image:: media_QGIS_new/image24.png
-   :width: 1200
+   :width: 1000
 .. |image25| image:: media_QGIS_new/image25.png
    :width: 1200
 .. |image26| image:: media_QGIS_new/image26.png
    :width: 1200
 .. |image27| image:: media_QGIS_new/image27.png
-   :width: 600
+   :width: 400
 .. |image28| image:: media_QGIS_new/image28.png
    :width: 1200
 .. |image29| image:: media_QGIS_new/image29.png
@@ -1784,7 +1784,7 @@ Looking at this plugin:
 .. |image46| image:: media_QGIS_new/image46.png
    :width: 1200
 .. |image47| image:: media_QGIS_new/image47.png
-    :width: 1000
+    :width: 600
 .. |image48| image:: media_QGIS_new/image48.png
    :width: 1200
 .. |image49| image:: media_QGIS_new/image49.png
@@ -1794,11 +1794,11 @@ Looking at this plugin:
 .. |image51| image:: media_QGIS_new/image51.png
    :width: 1200
 .. |image52| image:: media_QGIS_new/image52.png
-   :width: 600
+   :width: 400
 .. |image53| image:: media_QGIS_new/image53.png
-   :width: 1200
+   :width: 1000
 .. |image54| image:: media_QGIS_new/image54.png
-   :width: 1200
+   :width: 1000
 .. |image55| image:: media_QGIS_new/image55.png
    :width: 1200
 .. |image56| image:: media_QGIS_new/image56.png
@@ -1810,7 +1810,7 @@ Looking at this plugin:
 .. |image59| image:: media_QGIS_new/image59.png
    :width: 1200
 .. |image60| image:: media_QGIS_new/image60.png
-   :width: 1200
+   :width: 1000
 .. |image61| image:: media_QGIS_new/image61.png
    :width: 1200
 .. |image62| image:: media_QGIS_new/image62.png
@@ -1824,7 +1824,7 @@ Looking at this plugin:
 .. |image66| image:: media_QGIS_new/image66.png
    :width: 1200
 .. |image67| image:: media_QGIS_new/image67.png
-   :width: 1000
+   :width: 800
 .. |image68| image:: media_QGIS_new/image68.png
    :width: 1000
 .. |image69| image:: media_QGIS_new/image69.png
@@ -1846,7 +1846,7 @@ Looking at this plugin:
 .. |image77| image:: media_QGIS_new/image77.png
    :width: 1200
 .. |image52| image:: media_QGIS_new/image52.png
-   :width: 1200
+   :width: 600
 .. |image78| image:: media_QGIS_new/image78.png
    :width: 1200
 .. |image79| image:: media_QGIS_new/image79.png
@@ -1856,13 +1856,13 @@ Looking at this plugin:
 .. |image81| image:: media_QGIS_new/image81.png
    :width: 1200
 .. |image82| image:: media_QGIS_new/image82.png
-   :width: 1200
+   :width: 800
 .. |image83| image:: media_QGIS_new/image83.png
    :width: 1000
 .. |image84| image:: media_QGIS_new/image84.png
    :width: 1200
 .. |image85| image:: media_QGIS_new/image85.png
-   :width: 1000
+   :width: 800
 .. |image86| image:: media_QGIS_new/image86.png
    :width: 1200
 .. |image87| image:: media_QGIS_new/image87.png
