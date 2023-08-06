@@ -1,4 +1,4 @@
-QGIS-MGCI: Pilot testing of SDG Indicator 15.4.2 :sub:`beta`
+QGIS-MGCI: Pilot testing of SDG Indicator 15.4.2 :sub:`gamma`
 =============================================================
 A QGIS-based workflow to support the computation of SDG Indicator 15.4.2, which includes sub-indicator a (Mountain Green Cover Index) and sub-indicator b (Proportion of degraded mountain land)
 
@@ -1732,7 +1732,7 @@ Looking at this plugin:
 .. |image21| image:: media_QGIS_new/image21.png
    :width: 10in
 .. |image12| image:: media_QGIS_new/image12.png
-   :width: 10in
+   :width: 200
 .. |image22| image:: media_QGIS_new/image22.png
    :width: 10in
 .. |image23| image:: media_QGIS_new/image23.png
