@@ -1,5 +1,5 @@
-QGIS-MGCI 15.4.2 :sub:`gamma`
-=============================
+QGIS-MGCI-DML 15.4.2 :sub:`beta`
+=================================
 
 A QGIS-based workflow to support the computation of SDG Indicator 15.4.2, which includes:
 sub-indicator a (Mountain Green Cover Index) 
@@ -11,27 +11,27 @@ sub-indicator b (Proportion of degraded mountain land)
 General Information
 --------------------
 
-About QGIS-MGCI :sub:`gamma`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+About QGIS-MGCI-DML:sub:`beta`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This documentation and geospatial workflow has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations to support member countries to compute and report against SDG Indicator 15.4.2. 
 
 The geospatial workflow was developed using QGIS 3.22.16, a free and open-source geographic information system licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities. We suggest users use the Long-Term Release version [1]_ of QGIS to undertake their analysis as this is most stable versions and users are less likely to incur technical difficulties and bugs. There are various installers depending on your operating system but for most users we recommend the QGIS Standalone Installer. Full instructions are on their website: `https://qgis.org/en/site/forusers/download.html# <https://qgis.org/en/site/forusers/download.html>`__\. To run this workflow, you will also need to have R Software 4.4.1.
 
-The QGIS-MGCI :sub:`beta` workflow is in a beta stage and therefore it is still under development. Please contact the QGIS-MGCI :sub:`beta` development team with any comments or suggestions.
+The QGIS-MGCI-DML 15.4.2 :sub:`beta` workflow is in a beta stage and therefore it is still under development. Please contact the QGIS-MGCI-DML 15.4.2 :sub:`beta` development team with any comments or suggestions.
 
 If you have specific bugs to report or improvements to the tool that you would like to suggest, please use the `GitHub’s issue tracker
-<https://github.com/dfguerrerom/wcmc-mgci/issues>`_ of the QGIS-MGCI :sub:`beta` module and do follow the `contribution guidelines
+<https://github.com/dfguerrerom/wcmc-mgci/issues>`_ of the QGIS-MGCI-DML 15.4.2 :sub:`beta` module and do follow the `contribution guidelines
 <https://github.com/dfguerrerom/wcmc-mgci/blob/master/CONTRIBUTE.md>`_.
 
 Authors 
 ^^^^^^^
 
-QGIS-MGCI :sub:`gamma` has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations. Contributors to QGIS-MGCI :sub:`gamma` and its documentation include Corinna Ravilious, Vignesh Kamath Cannanure, Boipelo Tshwene-Mauchaza, Cristina Telhado and Valerie Kapos. 
+QGIS-MGCI-DML 15.4.2 :sub:`beta` has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations. Contributors to QGIS-MGCI :sub:`gamma` and its documentation include Corinna Ravilious, Vignesh Kamath Cannanure, Boipelo Tshwene-Mauchaza, Cristina Telhado and Valerie Kapos. 
 
 License
 ^^^^^^^
-The QGIS-MGCI :sub:`beta` workflow and its documentation is made available under the terms of the `Creative Commons Attribution 4.0 International License (CC BY 4.0) <https://creativecommons.org/licenses/by/4.0/>`_ .
+The QGIS-MGCI-DML 15.4.2 :sub:`beta` workflow and its documentation is made available under the terms of the `Creative Commons Attribution 4.0 International License (CC BY 4.0) <https://creativecommons.org/licenses/by/4.0/>`_ .
 
 Background
 ^^^^^^^^^^
@@ -82,7 +82,7 @@ For disaggregation purposes, this mountain area is subdivided into bioclimatic b
 A global mountain area map sub-divided by bioclimatic belts has been developed by FAO and made available to national authorities to facilitate the computation of this indicator. This map is the result of combining a global mountain area map developed from the Global Multi-Resolution Terrain Elevation Data (GMTED2010), following the UNEP-WCMC methodology (Ravilious et al. 2021) and a mountain bioclimatic belt map created by the Global Mountain Biodiversity Assessment
 
 Overview of the land cover data
--------------------------------
+--------------------------------
 
 Land cover refers to the observed physical cover of the Earth’s surface. It includes vegetation and manmade features as well as bare rock, bare soil and inland water surfaces (FAO-GTOS, 2009). The primary units for characterizing land cover are categories (e.g. Forest or Open Water). These categories must be defined following a standardized land cover
 classification in order to identify land cover changes consistently over time.
@@ -125,16 +125,124 @@ Land cover maps developed by relevant national authorities will generally provid
 
 The global default source of land cover data for this indicator is the European Space Agency Climate Change Initiative (ESA-CCI) Land Cover product (ESA, 2017). The ESA-CCI product consists of a series of annual Land Cover maps at 300 m resolution, providing 22 land cover classes based on 300m MERIS, 1km SPOT – VEGETATION, 1km PROBA –V and 1km AVHRR. The ESA CCI adheres to the Cover Classification System of the United Nations Food and Agriculture Organization (UN FAO) (Santoro et al. 2015). Annual updates are currently available from 1992 to 2020. Additional years will be made available by the European Space Agency
 
-Before using this tutorial
-==========================
+Before using QGIS-MGCI-DML 15.4.2 :sub:`beta`
+---------------------------------------------
 
 To run this workflow you will need have QGIS 3.20 or a higher version installed in your computer.
 
+We suggest users use the Long-Term Release version  of QGIS to undertake their analysis as this is most stable versions and users are less likely to incur technical difficulties and bugs.  There are various installers depending on your operating system but for most users we recommend the QGIS Standalone Installer. Full instructions are on their website: https://qgis.org/en/site/forusers/download.html#
+
+Whilst the MGCI-DML analysis runs entirely within the QGIS interface, users
+wishing to use QGIS for the MGCI-DML analysis are also required to install R
+software. R scripts can be run from within the QGIS
+interface and an R script will be only be used for calculating real
+surface area during the MGCI-DML calculations. Real surface area can be
+calculated using one of the ready to use SAGA tools in the processing
+toolbox, however after initial testing we found the results differed
+from the GEE and R methods and therefore due to the need for consistency
+between calculation methods for this SDG indicator, the best and easiest
+method was to integrate the ‘surfaceArea’ function from package ‘sp in R
+software.
+
+Once QGIS and R are both correctly installed users will need to install
+the following plugins:
+
+1. **Processing R Provider:** This plugin essentially allows R scripts
+   to be used directly within the QGIS processing toolbox with the
+   simple addition of some QGIS header information placed at the top of
+   the script to making the R script behave exactly like other
+   processing tools in the QGIS processing toolbox. The header
+   information allows graphical fields to be set in the processing
+   dialogue window when running the tool e.g. the input raster, a
+   specific field or the location and name of an output raster. Some
+   header information is used to tell QGIS to either pass information to
+   R and from QGIS about the tool to enable the R processing to happen
+   within the QGIS interface.
+
+-  From the QGIS Menu Toolbar click on **Plugins>>Manage and Install
+   Plugins**
+
+   |image9orig|
+
+-  From the Plugin dialogue window search for **processing R**
+
+   |image10orig|
+
+-  Click **Install Plugin** and then **Close**
+
+Once installed R will appear as a processing tool in the processing
+toolbox and an R Scripts button in the Processing Toolbox Menu.
+
+|image12orig|
+   
+Users may find that the R scripts button is missing at this stage.
+
+-  Click the arrow next to the **R** Tools to expand the R toolset.
+
+The toolset should look similar to the below with a few example scripts.
+
+|image13orig|
+
+and the processing Toolbox Menu should look like this with the missing R scripts button |image14|
+
+|image15orig|
+
+-  From the QGIS main menu click on **settings>>
+   options>>processing>>providers**
+
+-  expand **R** to see the R setting
+
+   |image16orig|
+
+If you operating system is 64 bit, tick **Use 64bit version**
+
+-  Check the **R folder** is pointing to the correct location (where it
+   is installed on your computer)
+
+-  Click okay
+
+-  Save the QGIS project and re-open to activate the changes.
+
+You should now see that the R script button has appeared on the
+processing toolbox menu
+
+|image17orig|
+
+Next add additional resources to the R processing toolbox
+
+-  To add other R resources click on **plugins>>resource
+   sharing>>resource sharing**
+
+   |image18orig|
+
+-  Click on **All Collections** on the left hand panel and click **QGIS
+   R script collection (QGIS Official Repository)** then click
+   **Install**
+
+   |image19orig|
+
+A wider collection of scripts should now be present in the R-scripts
+collection. These are not required for MGCI but useful for R-Integration
+with QGIS.
 
 
-1. 
+**Resource sharing plugin:** This plugin is a useful R related
+plugin (which is not essential for the MGCI but useful for users
+wishing to integrate R with QGIS).
 
-2. 
+Once the resource sharing plugin is installed some scripts should
+also be visible. They are grouped into several categories as in the
+screengrab below.
+
+|image30orig|
+
+For further information see the following sections of the QGIS user
+manual at
+
+-  https://docs.qgis.org/3.16/en/docs/user_manual/processing/3rdParty.html#r-scripts
+
+-  https://docs.qgis.org/3.16/en/docs/user\_manual/processing/3rdParty.html#index-5
+
 
    1. .. rubric:: Defining analyses environments and land cover data
          selection
@@ -1901,3 +2009,35 @@ Looking at this plugin:
    :width: 1200
 .. |image102| image:: media_QGIS_new/image102.png
    :width: 1200
+
+
+.. |image9orig| image:: media_QGIS/image11.png
+   :width: 5.52160in
+   :height: 0.94805in
+.. |image10orig| image:: media_QGIS/image12.png
+   :width: 6.26806in
+   :height: 3.70278in
+.. |image12orig| image:: media_QGIS/image14.png
+   :width: 4.42653in
+   :height: 4.71816in
+.. |image13orig| image:: media_QGIS/image15.png
+   :width: 3.44840in
+   :height: 1.83359in
+.. |image15orig| image:: media_QGIS/image17.png
+   :width: 3.21875in
+   :height: 1.13542in
+.. |image16orig| image:: media_QGIS/image18.png
+   :width: 6.26806in
+   :height: 2.56667in
+.. |image17orig| image:: media_QGIS/image19.png
+   :width: 2.32263in
+   :height: 0.97904in
+.. |image18orig| image:: media_QGIS/image20.png
+   :width: 6.26806in
+   :height: 3.45417in
+.. |image19orig| image:: media_QGIS/image21.png
+   :width: 5.21948in
+   :height: 1.75024in
+.. |image30orig| image:: media_QGIS/image32.png
+   :width: 3.37547in
+   :height: 4.79234in
