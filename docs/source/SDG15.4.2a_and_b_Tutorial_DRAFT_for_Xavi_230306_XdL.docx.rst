@@ -1688,29 +1688,29 @@ Looking at this plugin:
    associated aquatic ecosystems” (IPBES, 2018)
 
 .. |image1| image:: media_QGIS_new/image1.png
-   :width: 10in
+   :width: 1200
 .. |image2| image:: media_QGIS_new/image2.png
-   :width: 10in
+   :width: 1200
 .. |image3| image:: media_QGIS_new/image3.png
-   :width: 10in
+   :width: 1200
 .. |image4| image:: media_QGIS_new/image4.png
-   :width: 10in
+   :width: 1200
 .. |image5| image:: media_QGIS_new/image5.png
-   :width: 10in
+   :width: 1200
 .. |image6| image:: media_QGIS_new/image6.png
-   :width: 10in
+   :width: 1200
 .. |image7| image:: media_QGIS_new/image7.png
-   :width: 10in
+   :width: 1200
 .. |image8| image:: media_QGIS_new/image8.png
-   :width: 10in
+   :width: 1200
 .. |image9| image:: media_QGIS_new/image9.png
-   :width: 10in
+   :width: 1200
 .. |image10| image:: media_QGIS_new/image10.png
-   :width: 10in
+   :width: 1200
 .. |image11| image:: media_QGIS_new/image11.png
-   :width: 10in
+   :width: 1200
 .. |image12| image:: media_QGIS_new/image12.png
-   :width: 2in
+   :width: 200
 .. |image13| image:: media_QGIS_new/image13.png
    :width: 10in
 .. |image14| image:: media_QGIS_new/image14.png
