@@ -1710,7 +1710,7 @@ Looking at this plugin:
 .. |image11| image:: media_QGIS_new/image11.png
    :width: 10in
 .. |image12| image:: media_QGIS_new/image12.png
-   :width: 10in
+   :width: 6in
 .. |image13| image:: media_QGIS_new/image13.png
    :width: 10in
 .. |image14| image:: media_QGIS_new/image14.png
@@ -1726,9 +1726,9 @@ Looking at this plugin:
 .. |image18| image:: media_QGIS_new/image18.png
    :width: 10in
 .. |image19| image:: media_QGIS_new/image19.png
-   :width: 10in
+   :width: 8in
 .. |image20| image:: media_QGIS_new/image20.png
-   :width: 10in
+   :width: 8in
 .. |image21| image:: media_QGIS_new/image21.png
    :width: 10in
 .. |image12| image:: media_QGIS_new/image12.png
@@ -1744,13 +1744,13 @@ Looking at this plugin:
 .. |image26| image:: media_QGIS_new/image26.png
    :width: 10in
 .. |image27| image:: media_QGIS_new/image27.png
-   :width: 10in
+   :width: 6in
 .. |image28| image:: media_QGIS_new/image28.png
    :width: 10in
 .. |image29| image:: media_QGIS_new/image29.png
    :width: 10in
 .. |image30| image:: media_QGIS_new/image30.png
-   :width: 10in
+   :width: 6in
 .. |image31| image:: media_QGIS_new/image31.png
    :width: 10in
 .. |image32| image:: media_QGIS_new/image32.png
@@ -1784,7 +1784,7 @@ Looking at this plugin:
 .. |image46| image:: media_QGIS_new/image46.png
    :width: 10in
 .. |image47| image:: media_QGIS_new/image47.png
-    :width: 10in
+    :width: 9in
 .. |image48| image:: media_QGIS_new/image48.png
    :width: 10in
 .. |image49| image:: media_QGIS_new/image49.png
@@ -1794,7 +1794,7 @@ Looking at this plugin:
 .. |image51| image:: media_QGIS_new/image51.png
    :width: 10in
 .. |image52| image:: media_QGIS_new/image52.png
-   :width: 10in
+   :width: 8in
 .. |image53| image:: media_QGIS_new/image53.png
    :width: 10in
 .. |image54| image:: media_QGIS_new/image54.png
@@ -1804,7 +1804,7 @@ Looking at this plugin:
 .. |image56| image:: media_QGIS_new/image56.png
     :width: 10in
 .. |image57| image:: media_QGIS_new/image57.png
-   :width: 10in
+   :width: 4in
 .. |image58| image:: media_QGIS_new/image58.png
    :width: 10in
 .. |image59| image:: media_QGIS_new/image59.png
@@ -1824,9 +1824,9 @@ Looking at this plugin:
 .. |image66| image:: media_QGIS_new/image66.png
    :width: 10in
 .. |image67| image:: media_QGIS_new/image67.png
-   :width: 10in
+   :width: 8in
 .. |image68| image:: media_QGIS_new/image68.png
-   :width: 10in
+   :width: 8in
 .. |image69| image:: media_QGIS_new/image69.png
    :width: 10in
 .. |image70| image:: media_QGIS_new/image70.png
@@ -1858,11 +1858,11 @@ Looking at this plugin:
 .. |image82| image:: media_QGIS_new/image82.png
    :width: 10in
 .. |image83| image:: media_QGIS_new/image83.png
-   :width: 10in
+   :width: 9in
 .. |image84| image:: media_QGIS_new/image84.png
    :width: 10in
 .. |image85| image:: media_QGIS_new/image85.png
-   :width: 10in
+   :width: 9in
 .. |image86| image:: media_QGIS_new/image86.png
    :width: 10in
 .. |image87| image:: media_QGIS_new/image87.png
