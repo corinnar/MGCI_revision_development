@@ -11,8 +11,8 @@ sub-indicator b (Proportion of degraded mountain land)
 General Information
 --------------------
 
-About QGIS-MGCI-DML:sub:`beta`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+About QGIS-MGCI-DML :sub:`beta`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This documentation and geospatial workflow has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations to support member countries to compute and report against SDG Indicator 15.4.2. 
 
