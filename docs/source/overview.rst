@@ -36,78 +36,86 @@ from 2 different software:**
 
 |imageworkflow|
 
-Figure 1: Simplified Workflow
+Figure 1: Simplified Workflow (still need to edit and upload latest)
 
-Overview of Mountain Descriptor layer
--------------------------------------
+Overview of Mountain Area Map
+-----------------------------
 
-Mountains can be defined with reference to a variety of parameters, such
-as climate, elevation, ecology (Körner, Paulsen, & Spehn, 2011)
-(Karagulle, et al., 2017). This methodology adheres to the UNEP- WCMC
-mountain definition, relying in turn on the mountain description
-proposed by (Kapos, Rhind, Edwards, Prince, & Ravilious, 2000). This
-description classifies mountains according to altitude, slope and
-elevation range into 6 categories.
+Several methodologies have been developed in the last decades to consistently classify and map global mountain systems, using a variety of parameters such as elevation, topography, climate and ecology.
 
-+----------------------+-------------------------------------------------------------------------------------------------------------+
-| **Mountain Class**   | **Description**                                                                                             |
-+======================+=============================================================================================================+
-| 1                    | Elevation > 4.500 meters                                                                                    |
-+----------------------+-------------------------------------------------------------------------------------------------------------+
-| 2                    | Elevation 3.500–4.500 meters                                                                                |
-+----------------------+-------------------------------------------------------------------------------------------------------------+
-| 3                    | Elevation 2.500–3.500 meters                                                                                |
-+----------------------+-------------------------------------------------------------------------------------------------------------+
-| 4                    | Elevation 1.500–2.500 meters and slope > 2                                                                  |
-+----------------------+-------------------------------------------------------------------------------------------------------------+
-| 5                    | Elevation 1.000–1.500 meters and slope > 5 or local elevation range (LER 7 kilometer radius) > 300 meters   |
-+----------------------+-------------------------------------------------------------------------------------------------------------+
-| 6                    | Elevation 300–1.000 meters and local elevation range (7 kilometer radius) > 300 meters                      |
-+----------------------+-------------------------------------------------------------------------------------------------------------+
+For the purposes of standardization and international comparability of nationally derived-estimates, this indicator adheres to the UNEP-WCMC mountain definition (UNEP-WCMC, 2002). The UNEP-WCMC method defines total global mountain area as the sum of seven classes (commonly known as ‘Kapos mountain classes’), based on elevation, slope and local elevation ranges parameters. The mapping of mountain areas using this methodology requires a Digital Elevation Model (DEM).
 
-*Please note that (as per the methodology description in Kapos et. al.
-2000), Inner isolated areas (<=25km2 in size) that don't meet criteria
-but are surrounded by mountains are identified and merged into whichever
-class they are surrounded by.*
+For disaggregation purposes, this mountain area is subdivided into bioclimatic belts as defined by Körner et al. (2011). Körner et al. subdivides mountains vertically into seven bioclimatic belts based on average temperatures, therefore accounting the latitudinal change in elevation of thermally similar areas in the world’s mountains. For the purposes of this indicator, these seven bioclimatic belts are aggregated into four (Nival, Alpine, Montane and Remaining mountain areas), as illustrated in Table 1.
 
-Overview of Vegetation Descriptor layer
----------------------------------------
+**Table 1.** Mountain bioclimatic belts as defined by Körner et al. (2011) and reclassification for data disaggregation of SDG Indicator 15.4.2. Growing season is defined as the number of days between daily mean temperature exceeds 0.9 °C then falls below 0.9 °C
 
-The vegetation descriptor layer categorizes land cover into green and
-non-green areas. Green vegetation includes both natural vegetation and
-vegetation resulting from anthropic activity (e.g. crops, afforestation,
-etc.). Non-green areas include very sparsely vegetated areas, bare land,
-water, permanent ice/snow and urban areas. The vegetation description
-layer can be derived in different ways, but remote sensing based land
-cover maps are the most convenient data source for this purpose, as they
-provide the required information on green and non-green areas in a
-spatially explicit manner and allow for comparison over time through
-land cover change analysis. Currently, FAO uses land cover time series
-produced by the European Space Agency (ESA) under the Climate Change
-Initiative (CCI) as a general solution. The original CCI classes are
-re-classified into six IPCC classes and further into binary
-green/non-green cover classes as follows:
++-----------------------------------------+-----------------------------------+-------------------------+------------------------------------------------------+
+| Bioclimatic belts                       | Growing season mean temperature   | Growing season length   | Bioclimatic belts adopted for SDG Indicator 15.4.2   |
++=========================================+===================================+=========================+======================================================+
+| Nival                                   | < 3.5 °C                          | < 10 days               | Nival                                                |
++-----------------------------------------+-----------------------------------+-------------------------+------------------------------------------------------+
+| Upper alpine                            | < 3.5 °C                          | > 10 days & < 54 days   | Alpine                                               |
++-----------------------------------------+-----------------------------------+-------------------------+------------------------------------------------------+
+| Lower alpine                            | < 6.4°C                           | < 54 days               |                                                      |
++-----------------------------------------+-----------------------------------+-------------------------+------------------------------------------------------+
+| THE TREELINE                            |
++-----------------------------------------+-----------------------------------+-------------------------+------------------------------------------------------+
+| Upper montane                           | > 6.4°C & ≤ 10 °C                 | ---                     | Montane                                              |
++-----------------------------------------+-----------------------------------+-------------------------+------------------------------------------------------+
+| Lower montane                           | > 10 °C & ≤ 15 °C                 | ---                     |                                                      |
++-----------------------------------------+-----------------------------------+-------------------------+------------------------------------------------------+
+| Remaining mountain area with frost      | > 15 °C                           | ---                     | Remaining mountain area                              |
++-----------------------------------------+-----------------------------------+-------------------------+------------------------------------------------------+
+| Remaining mountain area without frost   | > 15 °C                           |                         |                                                      |
++-----------------------------------------+-----------------------------------+-------------------------+------------------------------------------------------+
 
-+---------------------------------------------------+--------------------+---------------------+
-| ESA CCI class                                     | IPCC class         | Green / Non green   |
-+===================================================+====================+=====================+
-| 50, 60, 61, 62, 70, 71, 72, 80, 81, 82, 90, 100   | Forest\ :sup:`1`   | Green               |
-+---------------------------------------------------+--------------------+---------------------+
-| 110, 120, 121, 122, 130, 140,                     | Grassland          | Green               |
-+---------------------------------------------------+--------------------+---------------------+
-| 10,11, 12, 20, 30, 40                             | Cropland           | Green               |
-+---------------------------------------------------+--------------------+---------------------+
-| 160, 170, 180                                     | Wetland            | Non Green           |
-+---------------------------------------------------+--------------------+---------------------+
-| 190                                               | Settlement         | Non Green           |
-+---------------------------------------------------+--------------------+---------------------+
-| 150, 151, 152, 153, 200, 201, 202, 210, 220       | Other land         |  Non Green          |
-+---------------------------------------------------+--------------------+---------------------+
+A global mountain area map sub-divided by bioclimatic belts has been developed by FAO and made available to national authorities to facilitate the computation of this indicator. This map is the result of combining a global mountain area map developed from the Global Multi-Resolution Terrain Elevation Data (GMTED2010), following the UNEP-WCMC methodology (Ravilious et al. 2021) and a mountain bioclimatic belt map created by the Global Mountain Biodiversity Assessment
 
-:sup:`1` Please note, that here the term “Forest” refers to land cover,
-not necessarily land use
+Overview of the land cover data
+-------------------------------
 
-Overview of computation of Mountain Green Cover Index
+Land cover refers to the observed physical cover of the Earth’s surface. It includes vegetation and manmade features as well as bare rock, bare soil and inland water surfaces (FAO-GTOS, 2009). The primary units for characterizing land cover are categories (e.g. Forest or Open Water). These categories must be defined following a standardized land cover
+classification in order to identify land cover changes consistently over time.
+
+Several global standards of land cover classifications have been developed by international initiatives for this purpose. For the purposes of standardization and harmonization when reporting on SDG Indicator 15.4.2, this indicator has adapted the land cover classification established by the United Nations Statistical Commission’s System of Environmental and Economic Accounting (UN-SEEA)(UN Statistical Division, 2014) by selecting the most relevant SEEA classes for mountain ecosystems and aggregating all croplands classes in the following classification (Table 2).
+
+**Table 2.** Adapted UN-SEEA land cover classification for the computation and aggregate reporting on SDG Indicator 15.4.2.
+
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Land cover class**                                                  | **Description**                                                                                                                                                                                                                                                                                                                                                                                                  |
++=======================================================================+==================================================================================================================================================================================================================================================================================================================================================================================================================+
+| 1. Artificial surfaces                                                | The class is composed of any type of areas with a predominant artificial surface. Any urban or related feature is included in this class, for example, urban parks (parks, parkland and laws). The class also includes industrial areas, and waste dump deposit and extraction sites.                                                                                                                            |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2. Croplands                                                          | The class is composed of cultivated vegetation, including herbaceous plants, trees and/or shurbs. It includes:                                                                                                                                                                                                                                                                                                   |
+|                                                                       |                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|                                                                       | -  Herbaceous crops used for hay. All the non-perennial crops that do not last for more than two growing seasons and crops like sugar cane, where the upper part of the plant is regularly harvested while the root system can remain for more than one year in the field, are included in this class.                                                                                                           |
+|                                                                       |                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|                                                                       | -  All types of orchards and plantations (fruit trees, coffee and tea plantation, oil palms, rubber plantation, Christmas trees, etc.).                                                                                                                                                                                                                                                                          |
+|                                                                       |                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|                                                                       | -  Multiple or layered crops, including areas with two layers of different crops and/or areas with the presence of one important layer of natural vegetation (mainly trees) that covers one layer of cultivated crop.                                                                                                                                                                                            |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 3. Grasslands                                                         | This class includes any geographical area dominated by natural herbaceous plants (grasslands, prairies, steppes and savannahs) with a cover of 10 per cent or more, irrespective of different human and/or animal activities, such as grazing or selective fire management. Woody plants (trees and/or shrubs) can be present, assuming their cover is less that 10 per cent.                                    |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 4. Tree-covered areas                                                 | This class includes any geographical area dominated by natural tree plants with a cover of 10 per cent or more. Other types of plants (shrubs and/or herbs) can be present, even with a density higher than that of trees. Areas planted with trees for afforestation purposes and forest plantations are included in this class. This class includes areas seasonally or permanently flooded with freshwater.   |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 5. Shrub-covered areas                                                | This class includes any geographical area dominated by natural shrubs having a cover of 10 per cent or more. Trees can be present in scattered form if their cover is less than 10 per cent. Herbaceous plants can also be present at any density. The class includes shrub-covered areas permanently or regularly flooded by inland fresh water.                                                                |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 6. Shubs and/or herbaceous vegetation, aquatic or regularly flooded   | This class includes any geographical area dominated by natural herbaceous vegetation (cover of 10 per cent or more) that is permanently or regularly flooded by fresh or brackish water (swamps, marsh areas, etc.). Flooding must persist for at least two months per year to be considered regular. Woody vegetation (trees and/or shrubs) can be present if their cover is less than 10 per cent.             |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 7.Sparsely natural vegetated areas                                    | This class includes any geographical areas were the cover of natural vegetation is between 2 per cent and 10 per cent. This includes permanently or regularly flooded areas.                                                                                                                                                                                                                                     |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 8. Terrestrial barren land                                            | This class includes any geographical area dominated by natural abiotic surfaces (bare soil, sand, rocks, etc.) where the natural vegetation is absent or almost absent (covers less than 2 per cent). The class includes areas regularly flooded by inland water (lake shores, river banks, salt flats, etc.).                                                                                                   |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 9. Permanent snow and glaciers                                        | This class includes any geographical area covered by snow or glaciers persistently for 10 months or more.                                                                                                                                                                                                                                                                                                        |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 10. Inland water bodies                                               | This class includes any geographical area covered for most of the year by inland water bodies. In some cases, the water can be frozen for part of the year (less than 10 months). Because the geographical extent of water bodies can change, boundaries must be set consistently with those set by class 8, according to the dominant situation during the year and/or across multiple years.                   |
++-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Land cover maps developed by relevant national authorities will generally provide the most relevant data source to compute this indicator. However, in certain cases, such data may not be available. In those cases, various regional or global products provide a viable alternative.
+
+The global default source of land cover data for this indicator is the European Space Agency Climate Change Initiative (ESA-CCI) Land Cover product (ESA, 2017). The ESA-CCI product consists of a series of annual Land Cover maps at 300 m resolution, providing 22 land cover classes based on 300m MERIS, 1km SPOT – VEGETATION, 1km PROBA –V and 1km AVHRR. The ESA CCI adheres to the Cover Classification System of the United Nations Food and Agriculture Organization (UN FAO) (Santoro et al. 2015). Annual updates are currently available from 1992 to 2020. Additional years will be made available by the European Space Agency
+
+Overview of computation of Sub-indicators a and b
 -----------------------------------------------------
 
 Planimetric area calculation vs Real surface area calculation
