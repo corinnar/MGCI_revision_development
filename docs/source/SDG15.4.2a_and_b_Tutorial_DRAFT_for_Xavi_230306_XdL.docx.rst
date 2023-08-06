@@ -1710,7 +1710,7 @@ Looking at this plugin:
 .. |image11| image:: media_QGIS_new/image11.png
    :width: 10in
 .. |image12| image:: media_QGIS_new/image12.png
-   :width: 4in
+   :width: 2in
 .. |image13| image:: media_QGIS_new/image13.png
    :width: 10in
 .. |image14| image:: media_QGIS_new/image14.png
