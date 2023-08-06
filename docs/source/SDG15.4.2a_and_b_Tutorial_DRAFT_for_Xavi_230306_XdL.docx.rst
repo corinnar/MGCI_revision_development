@@ -1,174 +1,59 @@
-Pilot testing of SDG Indicator 1.5.4.2
+QGIS-MGCI: Pilot testing of SDG Indicator 15.4.2 :sub:`beta`
+=============================================================
+A QGIS-based workflow to support the computation of SDG Indicator 15.4.2, which includes sub-indicator a (Mountain Green Cover Index) and sub-indicator b (Proportion of degraded mountain land)
 
-Detailed step-by-step technical guidance for QGIS
+.. contents:: **Table of Contents**
 
-DRAFT 24 February 2023
+General Information
+--------------------
 
-**Contents**
-============
+About QGIS-MGCI :sub:`gamma`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Contents 1 <#_Toc128977936>`__
+This documentation and geospatial workflow has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations to support member countries to compute and report against SDG Indicator 15.4.2. 
 
-`1. Introduction 2 <#introduction>`__
+The geospatial workflow was developed using QGIS 3.22.16, a free and open-source geographic information system licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities. We suggest users use the Long-Term Release version [1]_ of QGIS to undertake their analysis as this is most stable versions and users are less likely to incur technical difficulties and bugs. There are various installers depending on your operating system but for most users we recommend the QGIS Standalone Installer. Full instructions are on their website: `https://qgis.org/en/site/forusers/download.html# <https://qgis.org/en/site/forusers/download.html>`__\. To run this workflow, you will also need to have R Software 4.4.1.
 
-`1.1. Overview of Mountain Area Map 2 <#_Toc128977938>`__
+The QGIS-MGCI :sub:`beta` workflow is in a beta stage and therefore it is still under development. Please contact the QGIS-MGCI :sub:`beta` development team with any comments or suggestions.
 
-`1.2. Overview of the land cover data 3 <#_Toc128977939>`__
+If you have specific bugs to report or improvements to the tool that you would like to suggest, please use the `GitHub’s issue tracker
+<https://github.com/dfguerrerom/wcmc-mgci/issues>`_ of the QGIS-MGCI :sub:`beta` module and do follow the `contribution guidelines
+<https://github.com/dfguerrerom/wcmc-mgci/blob/master/CONTRIBUTE.md>`_.
 
-`2. Before using this tutorial 5 <#_Toc128977940>`__
+Authors 
+^^^^^^^
 
-`3.1. Defining analyses environments and land cover data selection
-6 <#defining-analyses-environments-and-land-cover-data-selection>`__
+QGIS-MGCI :sub:`beta` has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations. Contributors to QGIS-MGCI :sub:`beta` and its documentation include Corinna Ravilious, Vignesh Kamath Cannanure, Boipelo Tshwene-Mauchaza, Cristina Telhado and Valerie Kapos. 
 
-`3.1.1. Defining projections to be used for the analysis
-6 <#_Toc128977944>`__
+License
+^^^^^^^
+The QGIS-MGCI :sub:`beta` workflow and its documentation is made available under the terms of the `Creative Commons Attribution 4.0 International License (CC BY 4.0) <https://creativecommons.org/licenses/by/4.0/>`_ .
 
-`3.1.2. Choice of Land Cover dataset 6 <#_Toc128977945>`__
+Background
+^^^^^^^^^^
 
-`3. Step-by-step instructions to calculate Sub-indicator 15.4.2a in QGIS
-7 <#_Toc128977946>`__
+SDG Indicator 15.4.2 – Mountain Green Cover Index (MGCI) is one of the two indicators under SDG Target 15.4, which aims to "*ensure the conservation of mountain ecosystems, including their biodiversity, to enhance their capacity to provide benefits which are essential for sustainable development*". The Food and Agriculture Organization (FAO) of the United Nations is the custodian agency of this indicator. 
 
-`4.1. Define projection 7 <#define-projection>`__
+The indicator is composed of two sub-indicators to monitor progress towards the conservation of mountain ecosystems: 
 
-`4.2. Generate the mountain map for the chosen country.
-11 <#_Toc128977949>`__
+**Sub-indicator 15.4.2a**, Mountain Green Cover Index (MGCI), is designed to measure the extent and changes of green cover - i.e. forest, shrubs, trees, pasture land, cropland, etc. – in mountain areas. MGCI is defined as the percentage of green cover over the total surface of the mountain area of a given country and for given reporting year. The aim of the index is to monitor the evolution of the green cover and thus assess the status of conservation of mountain ecosystems. 
 
-`4.3. Clip and project global mountain map 11 <#_Toc128977950>`__
+**Sub-indicator 15.4.2b**, Proportion of degraded mountain land, is designed to monitor the extent of degraded mountain land as a result of land cover change of a given country and for given reporting year. Similarly to sub-indicator ‘’trends in land cover” under SDG Indicator 15.3.1 (Sims et al. 2021), mountain ecosystem degradation and recovery is assessed based on the definition of land cover type transitions that constitute degradation, as either improving, stable or degraded. The definition of degradation adopted for the computation of this indicator is the one established Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES)footnote reference [#]_.
 
-`4.4. Generate the vegetation descriptor layer 15 <#_Toc128977951>`__
 
-`4.5. Clip and project LULC raster 15 <#_Toc128977952>`__
-
-`4.6. Reclassify to UN-SEEA land cover classes 19 <#_Toc128977953>`__
-
-`4.7. Combine mountain and vegetation descriptor layers
-21 <#_Toc128977954>`__
-
-`4.8. Aggregate the layers to a common spatial resolution
-21 <#_Toc128977955>`__
-
-`4.9. Combine mountain and vegetation descriptor layers
-22 <#_Toc128977956>`__
-
-`4.10. Computation of Mountain Green Cover Index 23 <#_Toc128977957>`__
-
-`4.11. Generate area statistics for each land cover class
-23 <#_Toc128977958>`__
-
-`4. Step-by-step instructions to calculate Sub-indicator 15.4.2b in QGIS
-30 <#step-by-step-instructions-to-calculate-sub-indicator-15.4.2b-in-qgis>`__
-
-`5.1. Generate LULC degradation layers for reporting periods
-31 <#generate-lulc-degradation-layers-for-reporting-periods>`__
-
-`5.2. Combine the landcover dataset for the baseline and reporting year
-32 <#combine-the-landcover-dataset-for-the-baseline-and-reporting-year>`__
-
-`5.3. Generate Transitions Matrix 34 <#_Toc128977963>`__
-
-`5.3.1. Use default transitions matrix (using UN-SEEA classification)
-34 <#use-the-default-transitions-matrix-using-the-default-lulc-legend>`__
-
-`5.3.2. Generate new transitions matrix (using National classification)
-34 <#generate-a-transitions-matrix-using-a-national-lulc-legend>`__
-
-`5.4. Reclassify landcover transitions using transitions matrix
-34 <#reclassify-lulc-transitions-using-the-transitions-matrix>`__
-
-`5.5. Combine landcover transitions, impact and bioclimatic belts
-34 <#combine-landcover-transitions-impact-and-bioclimatic-belts>`__
-
-`5.6. Computation of Proportion of degraded mountain area
-34 <#computation-of-proportion-of-degraded-mountain-area>`__
-
-`5.6.1. Generate area statistics for each land cover transition
-34 <#generate-area-statistics-for-each-land-cover-transition>`__
-
-`5.6.2. Calculate and format statistics to reporting format
-34 <#calculate-area-statistics-and-format-statistics-to-reporting-format>`__
-
-`5.7. Generate multiband raster to help with spatial interrogation of
-results and QA
-38 <#generate-multiband-raster-to-help-with-spatial-interrogation-of-results-and-qa>`__
-
-1. .. rubric:: 
-      :name: section-1
-
-2. .. rubric:: Introduction
-      :name: introduction
-      
-      
-This technical guidance is provided in support of SDG 15.4.2 which is 
-part of the target 15.4  "By 2030, ensure the conservation of mountain
-ecosystems, including their biodiversity, in order to enhance
-their capacity to provide benefits that are essential for
-sustainable development". The indicator has recently been revised and now contains
-two sub-Inficators (a) Mountain Green Cover Index and (b) Proportion of degraded mountain land.
-
-The purpose of this document is to provide countries wishing to calculate SDG Indicator 1.5.4.2
-themselves, detailed technical guidance on how to compute the two sub indicators. 
-
-We request that countries use these guidance materials for their clculations to maximize
-consistency in the application of the methodology between countries.
-
-Please see the full metadata
-`here <https://unstats.un.org/sdgs/metadata/files/Metadata-15-04-02.pdf>`_
-for further information about the indicator.
-
-The purpose of this document is explain the workflow and provide
-countries with detailed technical guidance on how to develop a
-nationally relevant mountain layer using the Kapos mountain method,
-use a nationally relevant landcover map and compute the MGCI to
-standard reporting tables required for the submission to FAO for
-this indicator. and as well as providing some best practice in
-combining layers at different resolutions. The standardisation of
-the guidance will also help enable consistency of reporting between
-countries and enable FAO to make the necessary regional and global
-summaries.
-
-**The workflow and guidance are provided to enable users to choose
-from 3 different software:**
-
-- Step-by-Step instructions in **QGIS (with R integration)**
-- SEPAL app: Users can register and log into the SEPAL data portal where a user-friendly interface will guide
-   technicians through a series of menu-driven steps to prepare the data for the
-   two sub-indicators. A global mountain area map sub-divided by bioclimatic belts has been
-   developed for this indicator by FAO and is made available to national authorities to
-   facilitate the computation of this indicator. Users will however be given the choice to upload their own data
-   or choose from data already uploaded to the tool. Users are encouraged to use national landcover data
-   whenever possible.  The final calculations for both sub-indicators will be
-   computed and outputs formatted to standard reporting tables.
-
+.. [#]IPBES defines land degradation as “the many human-caused processes that drive the decline or loss in biodiversity, ecosystem functions or ecosystem services in any terrestrial and associated aquatic ecosystems” (IPBES, 2018)
 
 
 Overview of Mountain Area Map
 -----------------------------
 
-Several methodologies have been developed in the last decades to
-consistently classify and map global mountain systems, using a variety
-of parameters such as elevation, topography, climate and ecology.
+Several methodologies have been developed in the last decades to consistently classify and map global mountain systems, using a variety of parameters such as elevation, topography, climate and ecology.
 
-For the purposes of standardization and international comparability of
-nationally derived-estimates, this indicator adheres to the UNEP-WCMC
-mountain definition (UNEP-WCMC, 2002). The UNEP-WCMC method defines
-total global mountain area as the sum of seven classes (commonly known
-as ‘Kapos mountain classes’), based on elevation, slope and local
-elevation ranges parameters. The mapping of mountain areas using this
-methodology requires a Digital Elevation Model (DEM).
+For the purposes of standardization and international comparability of nationally derived-estimates, this indicator adheres to the UNEP-WCMC mountain definition (UNEP-WCMC, 2002). The UNEP-WCMC method defines total global mountain area as the sum of seven classes (commonly known as ‘Kapos mountain classes’), based on elevation, slope and local elevation ranges parameters. The mapping of mountain areas using this methodology requires a Digital Elevation Model (DEM).
 
-For disaggregation purposes, this mountain area is subdivided into
-bioclimatic belts as defined by Körner et al. (2011). Körner et al.
-subdivides mountains vertically into seven bioclimatic belts based on
-average temperatures, therefore accounting the latitudinal change in
-elevation of thermally similar areas in the world’s mountains. For the
-purposes of this indicator, these seven bioclimatic belts are aggregated
-into four (Nival, Alpine, Montane and Remaining mountain areas), as
-illustrated in Table 1.
+For disaggregation purposes, this mountain area is subdivided into bioclimatic belts as defined by Körner et al. (2011). Körner et al. subdivides mountains vertically into seven bioclimatic belts based on average temperatures, therefore accounting the latitudinal change in elevation of thermally similar areas in the world’s mountains. For the purposes of this indicator, these seven bioclimatic belts are aggregated into four (Nival, Alpine, Montane and Remaining mountain areas), as illustrated in Table 1.
 
-**Table 1.** Mountain bioclimatic belts as defined by Körner et al.
-(2011) and reclassification for data disaggregation of SDG Indicator
-15.4.2. Growing season is defined as the number of days between daily
-mean temperature exceeds 0.9 °C then falls below 0.9 °C
+**Table 1.** Mountain bioclimatic belts as defined by Körner et al. (2011) and reclassification for data disaggregation of SDG Indicator 15.4.2. Growing season is defined as the number of days between daily mean temperature exceeds 0.9 °C then falls below 0.9 °C
 
 +-----------------------------------------+-----------------------------------+-------------------------+------------------------------------------------------+
 | Bioclimatic belts                       | Growing season mean temperature   | Growing season length   | Bioclimatic belts adopted for SDG Indicator 15.4.2   |
@@ -190,37 +75,17 @@ mean temperature exceeds 0.9 °C then falls below 0.9 °C
 | Remaining mountain area without frost   | > 15 °C                           |                         |                                                      |
 +-----------------------------------------+-----------------------------------+-------------------------+------------------------------------------------------+
 
-A global mountain area map sub-divided by bioclimatic belts has been
-developed by FAO and made available to national authorities to
-facilitate the computation of this indicator. This map is the result of
-combining a global mountain area map developed from the Global
-Multi-Resolution Terrain Elevation Data (GMTED2010), following the
-UNEP-WCMC methodology (Ravilious et al. 2021) and a mountain bioclimatic
-belt map created by the Global Mountain Biodiversity Assessment
+A global mountain area map sub-divided by bioclimatic belts has been developed by FAO and made available to national authorities to facilitate the computation of this indicator. This map is the result of combining a global mountain area map developed from the Global Multi-Resolution Terrain Elevation Data (GMTED2010), following the UNEP-WCMC methodology (Ravilious et al. 2021) and a mountain bioclimatic belt map created by the Global Mountain Biodiversity Assessment
 
 Overview of the land cover data
 -------------------------------
 
-Land cover refers to the observed physical cover of the Earth’s surface.
-It includes vegetation and manmade features as well as bare rock, bare
-soil and inland water surfaces (FAO-GTOS, 2009). The primary units for
-characterizing land cover are categories (e.g. Forest or Open Water).
-These categories must be defined following a standardized land cover
-classification in order to identify land cover changes consistently over
-time.
+Land cover refers to the observed physical cover of the Earth’s surface. It includes vegetation and manmade features as well as bare rock, bare soil and inland water surfaces (FAO-GTOS, 2009). The primary units for characterizing land cover are categories (e.g. Forest or Open Water). These categories must be defined following a standardized land cover
+classification in order to identify land cover changes consistently over time.
 
-Several global standards of land cover classifications have been
-developed by international initiatives for this purpose. For the
-purposes of standardization and harmonization when reporting on SDG
-Indicator 15.4.2, this indicator has adapted the land cover
-classification established by the United Nations Statistical
-Commission’s System of Environmental and Economic Accounting (UN-SEEA)
-(UN Statistical Division, 2014) by selecting the most relevant SEEA
-classes for mountain ecosystems and aggregating all croplands classes in
-the following classification (Table 2).
+Several global standards of land cover classifications have been developed by international initiatives for this purpose. For the purposes of standardization and harmonization when reporting on SDG Indicator 15.4.2, this indicator has adapted the land cover classification established by the United Nations Statistical Commission’s System of Environmental and Economic Accounting (UN-SEEA)(UN Statistical Division, 2014) by selecting the most relevant SEEA classes for mountain ecosystems and aggregating all croplands classes in the following classification (Table 2).
 
-**Table 2.** Adapted UN-SEEA land cover classification for the
-computation and aggregate reporting on SDG Indicator 15.4.2.
+**Table 2.** Adapted UN-SEEA land cover classification for the computation and aggregate reporting on SDG Indicator 15.4.2.
 
 +-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Land cover class**                                                  | **Description**                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -252,35 +117,16 @@ computation and aggregate reporting on SDG Indicator 15.4.2.
 | 10. Inland water bodies                                               | This class includes any geographical area covered for most of the year by inland water bodies. In some cases, the water can be frozen for part of the year (less than 10 months). Because the geographical extent of water bodies can change, boundaries must be set consistently with those set by class 8, according to the dominant situation during the year and/or across multiple years.                   |
 +-----------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Land cover maps developed by relevant national authorities will
-generally provide the most relevant data source to compute this
-indicator. However, in certain cases, such data may not be available. In
-those cases, various regional or global products provide a viable
-alternative.
+Land cover maps developed by relevant national authorities will generally provide the most relevant data source to compute this indicator. However, in certain cases, such data may not be available. In those cases, various regional or global products provide a viable alternative.
 
-The global default source of land cover data for this indicator is the
-European Space Agency Climate Change Initiative (ESA-CCI) Land Cover
-product (ESA, 2017). The ESA-CCI product consists of a series of annual
-Land Cover maps at 300 m resolution, providing 22 land cover classes
-based on 300m MERIS, 1km SPOT – VEGETATION, 1km PROBA –V and 1km AVHRR.
-The ESA CCI adheres to the Cover Classification System of the United
-Nations Food and Agriculture Organization (UN FAO) (Santoro et al.
-2015). Annual updates are currently available from 1992 to 2020.
-Additional years will be made available by the European Space Agency
+The global default source of land cover data for this indicator is the European Space Agency Climate Change Initiative (ESA-CCI) Land Cover product (ESA, 2017). The ESA-CCI product consists of a series of annual Land Cover maps at 300 m resolution, providing 22 land cover classes based on 300m MERIS, 1km SPOT – VEGETATION, 1km PROBA –V and 1km AVHRR. The ESA CCI adheres to the Cover Classification System of the United Nations Food and Agriculture Organization (UN FAO) (Santoro et al. 2015). Annual updates are currently available from 1992 to 2020. Additional years will be made available by the European Space Agency
 
 Before using this tutorial
 ==========================
 
-To run this workflow you will need have QGIS 3.20 or a higher version
-installed in your computer.
+To run this workflow you will need have QGIS 3.20 or a higher version installed in your computer.
 
-We suggest users use the Long-Term Release version [1]_ of QGIS to
-undertake their analysis as this is most stable versions and users are
-less likely to incur technical difficulties and bugs. There are various
-installers depending on your operating system but for most users we
-recommend the QGIS Standalone Installer. Full instructions are on their
-website:
-`https://qgis.org/en/site/forusers/download.html# <https://qgis.org/en/site/forusers/download.html>`__\ 
+
 
 1. 
 
@@ -1841,318 +1687,220 @@ Looking at this plugin:
    functions** or **ecosystem services** in any terrestrial and
    associated aquatic ecosystems” (IPBES, 2018)
 
-.. |image1| image:: media_QGIS_new/image1.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image2| image:: media_QGIS_new/image2.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image3| image:: media_QGIS_new/image3.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image4| image:: media_QGIS_new/image4.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image5| image:: media_QGIS_new/image5.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image6| image:: media_QGIS_new/image6.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image7| image:: media_QGIS_new/image7.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image8| image:: media_QGIS_new/image8.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image9| image:: media_QGIS_new/image9.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image10| image:: media_QGIS_new/image10.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image11| image:: media_QGIS_new/image11.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image12| image:: media_QGIS_new/image12.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image13| image:: media_QGIS_new/image13.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image14| image:: media_QGIS_new/image14.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image15| image:: media_QGIS_new/image15.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image16| image:: media_QGIS_new/image16.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image17| image:: media_QGIS_new/image17.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image9| image:: media_QGIS_new/image9.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image18| image:: media_QGIS_new/image18.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image19| image:: media_QGIS_new/image19.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image20| image:: media_QGIS_new/image20.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image21| image:: media_QGIS_new/image21.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image12| image:: media_QGIS_new/image12.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image22| image:: media_QGIS_new/image22.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image23| image:: media_QGIS_new/image23.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image24| image:: media_QGIS_new/image24.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image25| image:: media_QGIS_new/image25.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image26| image:: media_QGIS_new/image26.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image27| image:: media_QGIS_new/image27.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image28| image:: media_QGIS_new/image28.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image29| image:: media_QGIS_new/image29.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image30| image:: media_QGIS_new/image30.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image31| image:: media_QGIS_new/image31.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image32| image:: media_QGIS_new/image32.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image33| image:: media_QGIS_new/image33.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image34| image:: media_QGIS_new/image34.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image35| image:: media_QGIS_new/image35.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image36| image:: media_QGIS_new/image36.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image37| image:: media_QGIS_new/image37.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image38| image:: media_QGIS_new/image38.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image39| image:: media_QGIS_new/image39.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image40| image:: media_QGIS_new/image40.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image41| image:: media_QGIS_new/image41.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image42| image:: media_QGIS_new/image42.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image43| image:: media_QGIS_new/image43.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image44| image:: media_QGIS_new/image44.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image45| image:: media_QGIS_new/image45.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image46| image:: media_QGIS_new/image46.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image47| image:: media_QGIS_new/image47.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image48| image:: media_QGIS_new/image48.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image49| image:: media_QGIS_new/image49.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image50| image:: media_QGIS_new/image50.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image51| image:: media_QGIS_new/image51.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image52| image:: media_QGIS_new/image52.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image53| image:: media_QGIS_new/image53.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image54| image:: media_QGIS_new/image54.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image55| image:: media_QGIS_new/image55.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image56| image:: media_QGIS_new/image56.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image57| image:: media_QGIS_new/image57.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image58| image:: media_QGIS_new/image58.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image59| image:: media_QGIS_new/image59.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image60| image:: media_QGIS_new/image60.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image61| image:: media_QGIS_new/image61.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image62| image:: media_QGIS_new/image62.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image63| image:: media_QGIS_new/image63.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image64| image:: media_QGIS_new/image64.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image65| image:: media_QGIS_new/image65.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image66| image:: media_QGIS_new/image66.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image67| image:: media_QGIS_new/image67.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image68| image:: media_QGIS_new/image68.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image69| image:: media_QGIS_new/image69.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image70| image:: media_QGIS_new/image70.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image71| image:: media_QGIS_new/image71.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image72| image:: media_QGIS_new/image72.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image73| image:: media_QGIS_new/image73.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image74| image:: media_QGIS_new/image74.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image75| image:: media_QGIS_new/image75.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image76| image:: media_QGIS_new/image76.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image77| image:: media_QGIS_new/image77.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image52| image:: media_QGIS_new/image52.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image78| image:: media_QGIS_new/image78.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image79| image:: media_QGIS_new/image79.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image80| image:: media_QGIS_new/image80.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image81| image:: media_QGIS_new/image81.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image82| image:: media_QGIS_new/image82.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image83| image:: media_QGIS_new/image83.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image84| image:: media_QGIS_new/image84.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image85| image:: media_QGIS_new/image85.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image86| image:: media_QGIS_new/image86.png
-     :width: 6.26806in
-   :height: 3.16875in
-.. |image87| image:: media_QGIS_new/image87.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image88| image:: media_QGIS_new/image88.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image89| image:: media_QGIS_new/image89.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image90| image:: media_QGIS_new/image90.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image91| image:: media_QGIS_new/image91.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image92| image:: media_QGIS_new/image92.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image93| image:: media_QGIS_new/image93.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image94| image:: media_QGIS_new/image94.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image95| image:: media_QGIS_new/image95.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image96| image:: media_QGIS_new/image96.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image97| image:: media_QGIS_new/image97.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image98| image:: media_QGIS_new/image98.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image99| image:: media_QGIS_new/image99.png
-    :width: 6.26806in
-   :height: 3.16875in
-.. |image100| image:: media_QGIS_new/image100.png
-    :width: 6.26806in
-   :height: 3.16875in
-.. |image101| image:: media_QGIS_new/image101.png
-   :width: 6.26806in
-   :height: 3.16875in
-.. |image102| image:: media_QGIS_new/image102.png
-   :width: 6.26806in
-   :height: 3.16875in
+.. |image1| image:: media/image1.png
+   :width: 900
+.. |image2| image:: media/image2.png
+   :width: 900
+.. |image3| image:: media/image3.png
+   :width: 900
+.. |image4| image:: media/image4.png
+   :width: 900
+.. |image5| image:: media/image5.png
+   :width: 900
+.. |image6| image:: media/image6.png
+   :width: 900
+.. |image7| image:: media/image7.png
+   :width: 900
+.. |image8| image:: media/image8.png
+   :width: 900
+.. |image9| image:: media/image9.png
+   :width: 900
+.. |image10| image:: media/image10.png
+   :width: 900
+.. |image11| image:: media/image11.png
+   :width: 900
+.. |image12| image:: media/image12.png
+   :width: 900
+.. |image13| image:: media/image13.png
+   :width: 900
+.. |image14| image:: media/image14.png
+   :width: 900
+.. |image15| image:: media/image15.png
+   :width: 900
+.. |image16| image:: media/image16.png
+   :width: 900
+.. |image17| image:: media/image17.png
+   :width: 900
+   
+.. |image9| image:: media/image9.png
+   :width: 900
+
+.. |image18| image:: media/image18.png
+   :width: 900
+.. |image19| image:: media/image19.png
+   :width: 900
+.. |image20| image:: media/image20.png
+   :width: 900
+.. |image21| image:: media/image21.png
+   :width: 900
+
+.. |image12| image:: media/image12.png
+   :width: 900
+
+
+.. |image22| image:: media/image22.png
+   :width: 900
+.. |image23| image:: media/image23.png
+   :width: 900
+.. |image24| image:: media/image24.png
+   :width: 900
+.. |image25| image:: media/image25.png
+   :width: 900
+.. |image26| image:: media/image26.png
+   :width: 900
+.. |image27| image:: media/image27.png
+   :width: 900
+.. |image28| image:: media/image28.png
+   :width: 900
+.. |image29| image:: media/image29.png
+   :width: 900
+.. |image30| image:: media/image30.png
+   :width: 900
+.. |image31| image:: media/image31.png
+   :width: 900
+.. |image32| image:: media/image32.png
+   :width: 900
+.. |image33| image:: media/image33.png
+   :width: 900
+.. |image34| image:: media/image34.png
+   :width: 900
+.. |image35| image:: media/image35.png
+   :width: 900
+.. |image36| image:: media/image36.png
+   :width: 900
+.. |image37| image:: media/image37.png
+   :width: 900
+.. |image38| image:: media/image38.png
+   :width: 900
+.. |image39| image:: media/image39.png
+   :width: 900
+.. |image40| image:: media/image40.png
+   :width: 900
+.. |image41| image:: media/image41.png
+   :width: 900
+.. |image42| image:: media/image42.png
+   :width: 900
+.. |image43| image:: media/image43.png
+   :width: 900
+.. |image44| image:: media/image44.png
+   :width: 900
+.. |image45| image:: media/image45.png
+   :width: 900
+.. |image46| image:: media/image46.png
+   :width: 900
+.. |image47| image:: media/image47.png
+   :width: 900
+.. |image48| image:: media/image48.png
+   :width: 900
+.. |image49| image:: media/image49.png
+   :width: 900
+.. |image50| image:: media/image50.png
+   :width: 900
+.. |image51| image:: media/image51.png
+   :width: 900
+.. |image52| image:: media/image52.png
+   :width: 900
+.. |image53| image:: media/image53.png
+   :width: 900
+.. |image54| image:: media/image54.png
+   :width: 900
+.. |image55| image:: media/image55.png
+   :width: 900
+.. |image56| image:: media/image56.png
+   :width: 900
+.. |image57| image:: media/image57.png
+   :width: 900
+.. |image58| image:: media/image58.png
+   :width: 900
+.. |image59| image:: media/image59.png
+   :width: 900
+.. |image60| image:: media/image60.png
+   :width: 900
+.. |image61| image:: media/image61.png
+   :width: 900
+.. |image62| image:: media/image62.png
+   :width: 900
+.. |image63| image:: media/image63.png
+   :width: 900
+.. |image64| image:: media/image64.png
+   :width: 900
+.. |image65| image:: media/image65.png
+   :width: 900
+.. |image66| image:: media/image66.png
+   :width: 900
+.. |image67| image:: media/image67.png
+   :width: 900
+.. |image68| image:: media/image68.png
+   :width: 900
+.. |image69| image:: media/image69.png
+   :width: 900
+.. |image70| image:: media/image70.png
+   :width: 900
+.. |image71| image:: media/image71.png
+   :width: 900
+.. |image72| image:: media/image72.png
+   :width: 900
+.. |image73| image:: media/image73.png
+   :width: 900
+.. |image74| image:: media/image74.png
+   :width: 900
+.. |image75| image:: media/image75.png
+   :width: 900
+.. |image76| image:: media/image76.png
+   :width: 900
+.. |image77| image:: media/image77.png
+   :width: 900
+
+.. |image52| image:: media/image52.png
+   :width: 900
+
+.. |image78| image:: media/image78.png
+   :width: 900
+.. |image79| image:: media/image79.png
+   :width: 900
+.. |image80| image:: media/image80.png
+   :width: 900
+.. |image81| image:: media/image81.png
+   :width: 900
+.. |image82| image:: media/image82.png
+   :width: 900
+.. |image83| image:: media/image83.png
+   :width: 900
+.. |image84| image:: media/image84.png
+   :width: 900
+.. |image85| image:: media/image85.png
+   :width: 900
+.. |image86| image:: media/image86.png
+   :width: 900
+.. |image87| image:: media/image87.png
+   :width: 900
+.. |image88| image:: media/image88.png
+   :width: 900
+.. |image89| image:: media/image89.png
+   :width: 900
+.. |image90| image:: media/image90.png
+   :width: 900
+.. |image91| image:: media/image91.png
+   :width: 900
+.. |image92| image:: media/image92.png
+   :width: 900
+.. |image93| image:: media/image93.png
+   :width: 900
+.. |image94| image:: media/image94.png
+   :width: 900
+.. |image95| image:: media/image95.png
+   :width: 900
+.. |image96| image:: media/image96.png
+   :width: 900
+.. |image97| image:: media/image97.png
+   :width: 900
+.. |image98| image:: media/image98.png
+   :width: 900
+.. |image99| image:: media/image99.png
+   :width: 900
+.. |image100| image:: media/image100.png
+   :width: 900
+.. |image101| image:: media/image101.png
+   :width: 900
+.. |image102| image:: media/image102.png
+   :width: 900
