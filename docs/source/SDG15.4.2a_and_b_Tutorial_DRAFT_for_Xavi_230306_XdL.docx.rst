@@ -1689,298 +1689,200 @@ Looking at this plugin:
 
 .. |image1| image:: media_QGIS_new/image1.png
    :width: 6in
-   :height: 5in
 .. |image2| image:: media_QGIS_new/image2.png
    :width: 6in
-   :height: 5in
 .. |image3| image:: media_QGIS_new/image3.png
    :width: 6in
-   :height: 5in
 .. |image4| image:: media_QGIS_new/image4.png
    :width: 6in
-   :height: 5in
 .. |image5| image:: media_QGIS_new/image5.png
    :width: 6in
-   :height: 5in
 .. |image6| image:: media_QGIS_new/image6.png
    :width: 6in
-   :height: 5in
 .. |image7| image:: media_QGIS_new/image7.png
    :width: 6in
-   :height: 5in
 .. |image8| image:: media_QGIS_new/image8.png
    :width: 6in
-   :height: 5in
 .. |image9| image:: media_QGIS_new/image9.png
    :width: 6in
-   :height: 5in
 .. |image10| image:: media_QGIS_new/image10.png
    :width: 6in
-   :height: 5in
 .. |image11| image:: media_QGIS_new/image11.png
    :width: 6in
-   :height: 5in
 .. |image12| image:: media_QGIS_new/image12.png
    :width: 6in
-   :height: 5in
 .. |image13| image:: media_QGIS_new/image13.png
    :width: 6in
-   :height: 5in
 .. |image14| image:: media_QGIS_new/image14.png
    :width: 6in
-   :height: 5in
 .. |image15| image:: media_QGIS_new/image15.png
    :width: 6in
-   :height: 5in
 .. |image16| image:: media_QGIS_new/image16.png
    :width: 6in
-   :height: 5in
 .. |image17| image:: media_QGIS_new/image17.png
    :width: 6in
-   :height: 5in
 .. |image9| image:: media_QGIS_new/image9.png
    :width: 6in
-   :height: 5in
 .. |image18| image:: media_QGIS_new/image18.png
    :width: 6in
-   :height: 5in
 .. |image19| image:: media_QGIS_new/image19.png
    :width: 6in
-   :height: 5in
 .. |image20| image:: media_QGIS_new/image20.png
    :width: 6in
-   :height: 5in
 .. |image21| image:: media_QGIS_new/image21.png
    :width: 6in
-   :height: 5in
 .. |image12| image:: media_QGIS_new/image12.png
    :width: 6in
-   :height: 5in
 .. |image22| image:: media_QGIS_new/image22.png
    :width: 6in
-   :height: 5in
 .. |image23| image:: media_QGIS_new/image23.png
    :width: 6in
-   :height: 5in
 .. |image24| image:: media_QGIS_new/image24.png
    :width: 6in
-   :height: 5in
 .. |image25| image:: media_QGIS_new/image25.png
    :width: 6in
-   :height: 5in
 .. |image26| image:: media_QGIS_new/image26.png
    :width: 6in
-   :height: 5in
 .. |image27| image:: media_QGIS_new/image27.png
    :width: 6in
-   :height: 5in
 .. |image28| image:: media_QGIS_new/image28.png
    :width: 6in
-   :height: 5in
 .. |image29| image:: media_QGIS_new/image29.png
    :width: 6in
-   :height: 5in
 .. |image30| image:: media_QGIS_new/image30.png
    :width: 6in
-   :height: 5in
 .. |image31| image:: media_QGIS_new/image31.png
    :width: 6in
-   :height: 5in
 .. |image32| image:: media_QGIS_new/image32.png
    :width: 6in
-   :height: 5in
 .. |image33| image:: media_QGIS_new/image33.png
     :width: 6in
-   :height: 5in
 .. |image34| image:: media_QGIS_new/image34.png
    :width: 6in
-   :height: 5in
 .. |image35| image:: media_QGIS_new/image35.png
    :width: 6in
-   :height: 5in
 .. |image36| image:: media_QGIS_new/image36.png
    :width: 6in
-   :height: 5in
 .. |image37| image:: media_QGIS_new/image37.png
    :width: 6in
-   :height: 5in
 .. |image38| image:: media_QGIS_new/image38.png
    :width: 6in
-   :height: 5in
 .. |image39| image:: media_QGIS_new/image39.png
    :width: 6in
-   :height: 5in
 .. |image40| image:: media_QGIS_new/image40.png
    :width: 6in
-   :height: 5in
 .. |image41| image:: media_QGIS_new/image41.png
    :width: 6in
-   :height: 5in
 .. |image42| image:: media_QGIS_new/image42.png
    :width: 6in
-   :height: 5in
 .. |image43| image:: media_QGIS_new/image43.png
    :width: 6in
-   :height: 5in
 .. |image44| image:: media_QGIS_new/image44.png
    :width: 6in
-   :height: 5in
 .. |image45| image:: media_QGIS_new/image45.png
    :width: 6in
-   :height: 5in
 .. |image46| image:: media_QGIS_new/image46.png
    :width: 6in
-   :height: 5in
 .. |image47| image:: media_QGIS_new/image47.png
     :width: 6in
-   :height: 5in
 .. |image48| image:: media_QGIS_new/image48.png
    :width: 6in
-   :height: 5in
 .. |image49| image:: media_QGIS_new/image49.png
    :width: 6in
-   :height: 5in
 .. |image50| image:: media_QGIS_new/image50.png
    :width: 6in
-   :height: 5in
 .. |image51| image:: media_QGIS_new/image51.png
    :width: 6in
-   :height: 5in
 .. |image52| image:: media_QGIS_new/image52.png
    :width: 6in
-   :height: 5in
 .. |image53| image:: media_QGIS_new/image53.png
    :width: 6in
-   :height: 5in
 .. |image54| image:: media_QGIS_new/image54.png
    :width: 6in
-   :height: 5in
 .. |image55| image:: media_QGIS_new/image55.png
    :width: 6in
-   :height: 5in
 .. |image56| image:: media_QGIS_new/image56.png
     :width: 6in
-   :height: 5in
 .. |image57| image:: media_QGIS_new/image57.png
    :width: 6in
-   :height: 5in
 .. |image58| image:: media_QGIS_new/image58.png
    :width: 6in
-   :height: 5in
 .. |image59| image:: media_QGIS_new/image59.png
    :width: 6in
-   :height: 5in
 .. |image60| image:: media_QGIS_new/image60.png
    :width: 6in
-   :height: 5in
 .. |image61| image:: media_QGIS_new/image61.png
    :width: 6in
-   :height: 5in
 .. |image62| image:: media_QGIS_new/image62.png
    :width: 6in
-   :height: 5in
 .. |image63| image:: media_QGIS_new/image63.png
    :width: 6in
-   :height: 5in
 .. |image64| image:: media_QGIS_new/image64.png
    :width: 6in
-   :height: 5in
 .. |image65| image:: media_QGIS_new/image65.png
    :width: 6in
-   :height: 5in
 .. |image66| image:: media_QGIS_new/image66.png
    :width: 6in
-   :height: 5in
 .. |image67| image:: media_QGIS_new/image67.png
    :width: 6in
-   :height: 5in
 .. |image68| image:: media_QGIS_new/image68.png
    :width: 6in
-   :height: 5in
 .. |image69| image:: media_QGIS_new/image69.png
    :width: 6in
-   :height: 5in
 .. |image70| image:: media_QGIS_new/image70.png
    :width: 6in
-   :height: 5in
 .. |image71| image:: media_QGIS_new/image71.png
    :width: 6in
-   :height: 5in
 .. |image72| image:: media_QGIS_new/image72.png
    :width: 6in
-   :height: 5in
 .. |image73| image:: media_QGIS_new/image73.png
      :width: 6in
-   :height: 5in
 .. |image74| image:: media_QGIS_new/image74.png
    :width: 6in
-   :height: 5in
 .. |image75| image:: media_QGIS_new/image75.png
    :width: 6in
-   :height: 5in
 .. |image76| image:: media_QGIS_new/image76.png
    :width: 6in
-   :height: 5in
 .. |image77| image:: media_QGIS_new/image77.png
    :width: 6in
-   :height: 5in
 .. |image52| image:: media_QGIS_new/image52.png
    :width: 6in
-   :height: 5in
 .. |image78| image:: media_QGIS_new/image78.png
    :width: 6in
-   :height: 5in
 .. |image79| image:: media_QGIS_new/image79.png
    :width: 6in
-   :height: 5in
 .. |image80| image:: media_QGIS_new/image80.png
    :width: 6in
-   :height: 5in
 .. |image81| image:: media_QGIS_new/image81.png
    :width: 6in
-   :height: 5in
 .. |image82| image:: media_QGIS_new/image82.png
    :width: 6in
-   :height: 5in
 .. |image83| image:: media_QGIS_new/image83.png
    :width: 6in
-   :height: 5in
 .. |image84| image:: media_QGIS_new/image84.png
    :width: 6in
-   :height: 5in
 .. |image85| image:: media_QGIS_new/image85.png
    :width: 6in
-   :height: 5in
 .. |image86| image:: media_QGIS_new/image86.png
    :width: 6in
-   :height: 5in
 .. |image87| image:: media_QGIS_new/image87.png
     :width: 6in
-   :height: 5in
 .. |image88| image:: media_QGIS_new/image88.png
    :width: 6in
-   :height: 5in
 .. |image89| image:: media_QGIS_new/image89.png
    :width: 6in
-   :height: 5in
 .. |image90| image:: media_QGIS_new/image90.png
    :width: 6in
-   :height: 5in
 .. |image91| image:: media_QGIS_new/image91.png
    :width: 6in
-   :height: 5in
 .. |image92| image:: media_QGIS_new/image92.png
    :width: 6in
-   :height: 5in
 .. |image93| image:: media_QGIS_new/image93.png
    :width: 6in
-   :height: 5in
 .. |image94| image:: media_QGIS_new/image94.png
    :width: 6in
-   :height: 5in
 .. |image95| image:: media_QGIS_new/image95.png
     :width: 6in
-   :height: 5in
 .. |image96| image:: media_QGIS_new/image96.png
    :width: 6in
    :height: 5in
@@ -1992,13 +1894,9 @@ Looking at this plugin:
    :height: 5in
 .. |image99| image:: media_QGIS_new/image99.png
     :width: 6in
-   :height: 5in
 .. |image100| image:: media_QGIS_new/image100.png
    :width: 6in
-   :height: 5in
 .. |image101| image:: media_QGIS_new/image101.png
    :width: 6in
-   :height: 5in
 .. |image102| image:: media_QGIS_new/image102.png
    :width: 6in
-   :height: 5in
