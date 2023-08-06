@@ -1,7 +1,10 @@
 QGIS-MGCI 15.4.2 :sub:`gamma`
 =============================
 
-A QGIS-based workflow to support the computation of SDG Indicator 15.4.2, which includes sub-indicator a (Mountain Green Cover Index) and sub-indicator b (Proportion of degraded mountain land)
+A QGIS-based workflow to support the computation of SDG Indicator 15.4.2, which includes:
+sub-indicator a (Mountain Green Cover Index) 
+and 
+sub-indicator b (Proportion of degraded mountain land)
 
 .. contents:: **Table of Contents**
 
