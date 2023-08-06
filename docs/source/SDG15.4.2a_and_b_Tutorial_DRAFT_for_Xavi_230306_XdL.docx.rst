@@ -39,7 +39,7 @@ Background
 
 test1
 
-.. include:: https://github.com/corinnar/MGCI_revision_development/edit/main/docs/source/overview.rst
+.. include:: overview.rst
 
 test2
 
