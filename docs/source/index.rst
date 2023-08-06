@@ -12,5 +12,4 @@ Contents
    overview
    defineenvs
    qgis
-   sepal
    annex
