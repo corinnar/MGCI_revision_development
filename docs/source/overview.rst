@@ -1,14 +1,15 @@
-Introduction to MGCI
-====================
+Background
+==========
+SDG Indicator 15.4.2 – Mountain Green Cover Index (MGCI) is one of the two indicators under SDG Target 15.4, which aims to "*ensure the conservation of mountain ecosystems, including their biodiversity, to enhance their capacity to provide benefits which are essential for sustainable development*". The Food and Agriculture Organization (FAO) of the United Nations is the custodian agency of this indicator. 
 
-The Mountain Green Cover Index (MGCI) is designed to measure the
-extent and the changes of green vegetation in mountain areas - i.e.
-forest, shrubs, trees, pasture land, crop land, etc. – in order to
-monitor progress towards the mountain target. MGCI is defined as the
-percentage of green cover over the total surface of the mountain
-region of a given country and for given reporting year. The aim of
-the index is to monitor the evolution of the green cover and thus
-assess the status of conservation of mountain ecosystems.
+The indicator is composed of two sub-indicators to monitor progress towards the conservation of mountain ecosystems: 
+
+**Sub-indicator 15.4.2a**, Mountain Green Cover Index (MGCI), is designed to measure the extent and changes of green cover - i.e. forest, shrubs, trees, pasture land, cropland, etc. – in mountain areas. MGCI is defined as the percentage of green cover over the total surface of the mountain area of a given country and for given reporting year. The aim of the index is to monitor the evolution of the green cover and thus assess the status of conservation of mountain ecosystems. 
+
+**Sub-indicator 15.4.2b**, Proportion of degraded mountain land, is designed to monitor the extent of degraded mountain land as a result of land cover change of a given country and for given reporting year. Similarly to sub-indicator ‘’trends in land cover” under SDG Indicator 15.3.1 (Sims et al. 2021), mountain ecosystem degradation and recovery is assessed based on the definition of land cover type transitions that constitute degradation, as either improving, stable or degraded. The definition of degradation adopted for the computation of this indicator is the one established Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES)footnote reference [#]_.
+
+
+.. [#]IPBES defines land degradation as “the many human-caused processes that drive the decline or loss in biodiversity, ecosystem functions or ecosystem services in any terrestrial and associated aquatic ecosystems” (IPBES, 2018)
 
 Please see the full metadata
 `here <https://unstats.un.org/sdgs/metadata/files/Metadata-15-04-02.pdf>`_
@@ -26,16 +27,12 @@ countries and enable FAO to make the necessary regional and global
 summaries.
 
 **The workflow and guidance are provided to enable users to choose
-from 3 different software:**
+from 2 different software:**
 
 - Step-by-Step instructions in **QGIS (with R integration)**
-- Step-by-Step instruction in **R** (plus and R-Script)
 - SEPAL app: Users can register and log into the SEPAL data portal where a user-friendly interface will guide
    technicians through a series of menu-driven steps to prepare the
-   mountain and vegetation descriptor layers before running the MGCI
-   calculations. Users will be given the choice to upload their own data
-   or choose from data already uploaded to the tool. The MGCI will be
-   computed and outputs formatted to standard reporting tables.
+   layers and run the calculations
 
 |imageworkflow|
 
@@ -195,5 +192,5 @@ We would like to express our special thanks to Jeff Jenness from Jenness Enterpr
    :width: 700
 .. |image6| image:: media_QGIS/image6.png
    :width: 700
-.. |imageworkflow| image:: media_QGIS/MGCI_workflow_Beta_simplified_workflow.png
+.. |imageworkflow| image:: media_QGIS_new/MGCI_workflow_revision_DRAFT.png
    :width: 900
