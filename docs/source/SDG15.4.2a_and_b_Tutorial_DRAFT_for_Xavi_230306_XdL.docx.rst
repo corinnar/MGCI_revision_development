@@ -752,8 +752,8 @@ only allow a single input for zones, we will combine the two datasets.
 
 |image33|
 
-Computation of Mountain Green Cover Index
------------------------------------------
+Computation of Sub-indicator a Mountain Green Cover Index
+---------------------------------------------------------
 
 Generate area statistics for each land cover class
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
