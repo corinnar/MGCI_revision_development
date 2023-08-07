@@ -451,7 +451,7 @@ Now that the country boundary is in the chosen projection, we can
 generate the mountains and land cover maps for Colombia.
 
 Generate the mountain map for the chosen country 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------------
 
 The development of mountain map consists in clipping and reprojecting
 the SDG 15.4.2. Global Mountain Descriptor Map developed by FAO to area
