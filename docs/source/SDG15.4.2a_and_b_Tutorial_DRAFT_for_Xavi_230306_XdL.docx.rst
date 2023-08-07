@@ -264,13 +264,10 @@ manual at
 -  https://docs.qgis.org/3.16/en/docs/user\_manual/processing/3rdParty.html#index-5
 
 
-   1. .. rubric:: Defining analyses environments and land cover data
-         selection
-         :name: defining-analyses-environments-and-land-cover-data-selection
-
-   2. .. rubric:: Defining projections to be used for the analysis
-         :name: defining-projections-to-be-used-for-the-analysis
-
+Defining analyses environments and land cover data selection
+------------------------------------------------------------
+Defining projections to be used for the analysis
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 With all map projections there will always be some distortions of area,
 shape, distance and direction and therefore careful selection of
 projection is important. There are no projections which fully preserve
@@ -296,7 +293,7 @@ alternative National projection, they should ensure that it has equal
 area properties.
 
 Choice of Land Cover dataset 
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In sub-indicator 15.4.2a, land cover is used to categorize land into
 green and non-green cover areas. As showed in Table 3, green cover
@@ -370,10 +367,8 @@ study. This section assumes that the user has already downloaded the
 global mountain map made available by FAO to compute this indicator and
 a land cover dataset meeting the requirements described in section 3.2.
 
-1. 
-
-   1. .. rubric:: Define projection
-         :name: define-projection
+Define projection
+^^^^^^^^^^^^^^^^^
 
 The first step is to define an Area of Interest (AOI) for the analysis.
 This should go beyond the country boundary as outlined in
@@ -455,8 +450,8 @@ Next use the reproject tool to project the country boundary layer to the
 Now that the country boundary is in the chosen projection, we can
 generate the mountains and land cover maps for Colombia.
 
- Generate the mountain map for the chosen country. 
----------------------------------------------------
+Generate the mountain map for the chosen country 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The development of mountain map consists in clipping and reprojecting
 the SDG 15.4.2. Global Mountain Descriptor Map developed by FAO to area
@@ -529,7 +524,7 @@ and 4 is “Remaining Mountain Area”.
 |image17|
 
  Generate the vegetation descriptor layer
------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To demonstrate the steps for processing a raster LULC dataset we will
 use the Global ESA CCI LULC dataset. If you are using a national
@@ -645,7 +640,7 @@ the country.
 |image25|
 
 Reclassify to UN-SEEA land cover classes
-----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The next step is to reclassify the LULC map into the 10 UN-SEEA classes
 defined for SDG Indicator 15.4.2
@@ -694,15 +689,15 @@ can see that the actual layer only has 10 values.
 
 |image29|
 
- Combine mountain and vegetation descriptor layers
---------------------------------------------------
+Combine mountain and vegetation descriptor layers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Now that we have 2 raster datasets in their native resolutions we need
 to bring the datasets together and ensure that correct aggregation is
 undertaken and that the all the layers align to a common resolution.
 
 Aggregate the layers to a common spatial resolution
----------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In this example we have the Mountain Descriptor layer at a 832 meters
 resolution and a vegetation descriptor layer at a 300 m resolution.
@@ -728,7 +723,7 @@ In the processing toolbox search for \ **\*r.resample\***
 |image31|
 
 Combine mountain and vegetation descriptor layers
--------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As SGD Indicator 15.4.2a requires disaggregation by both the 10 land
 cover classes and the 4 bioclimatic belts and the tools within QGIS will
@@ -757,11 +752,11 @@ only allow a single input for zones, we will combine the two datasets.
 
 |image33|
 
-1. .. rubric:: Computation of Mountain Green Cover Index
-      :name: computation-of-mountain-green-cover-index
+Computation of Mountain Green Cover Index
+-----------------------------------------
 
-2. .. rubric:: Generate area statistics for each land cover class
-      :name: generate-area-statistics-for-each-land-cover-class
+Generate area statistics for each land cover class
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The data are now in a consistent format, so we can now generate the
 statistics required for the MGCI reporting. As we want to generate
@@ -940,12 +935,8 @@ Sub-indicator a is now complete.
 
 Repeat for each of the reporting years.
 
-2. .. rubric:: 
-      :name: section-2
-
-3. .. rubric:: Step-by-step instructions to calculate Sub-indicator
-      15.4.2b in QGIS
-      :name: step-by-step-instructions-to-calculate-sub-indicator-15.4.2b-in-qgis
+Step-by-step instructions to calculate Sub-indicator 15.4.2b in QGIS
+=====================================================================
 
 This section of the tutorial explains in detail how to calculate value
 estimates for sub-indicator 15.4.2b in QGIS, continuing to use Colombia
