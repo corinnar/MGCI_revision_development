@@ -27,14 +27,14 @@ If you have specific bugs to report or improvements to the tool that you would l
 Authors 
 ^^^^^^^
 
-QGIS-MGCI-DML 15.4.2 :sub:`beta` has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations. Contributors to QGIS-MGCI :sub:`gamma` and its documentation include Corinna Ravilious, Vignesh Kamath Cannanure, Boipelo Tshwene-Mauchaza, Cristina Telhado and Valerie Kapos. 
+QGIS-MGCI-DML 15.4.2 :sub:`beta` has been developed by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC) in collaboration with the Food and Agriculture Organization (FAO) of the United Nations. Contributors to QGIS-MGCI-DML 15.4.2 :sub:`beta` and its documentation include Corinna Ravilious, Vignesh Kamath Cannanure, Boipelo Tshwene-Mauchaza, Cristina Telhado and Valerie Kapos. 
 
 License
 ^^^^^^^
 The QGIS-MGCI-DML 15.4.2 :sub:`beta` workflow and its documentation is made available under the terms of the `Creative Commons Attribution 4.0 International License (CC BY 4.0) <https://creativecommons.org/licenses/by/4.0/>`_ .
 
 Background
-^^^^^^^^^^
+----------
 
 SDG Indicator 15.4.2 – Mountain Green Cover Index (MGCI) is one of the two indicators under SDG Target 15.4, which aims to "*ensure the conservation of mountain ecosystems, including their biodiversity, to enhance their capacity to provide benefits which are essential for sustainable development*". The Food and Agriculture Organization (FAO) of the United Nations is the custodian agency of this indicator. 
 
@@ -49,7 +49,7 @@ The indicator is composed of two sub-indicators to monitor progress towards the 
 
 
 Overview of Mountain Area Map
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Several methodologies have been developed in the last decades to consistently classify and map global mountain systems, using a variety of parameters such as elevation, topography, climate and ecology.
 
@@ -82,7 +82,7 @@ For disaggregation purposes, this mountain area is subdivided into bioclimatic b
 A global mountain area map sub-divided by bioclimatic belts has been developed by FAO and made available to national authorities to facilitate the computation of this indicator. This map is the result of combining a global mountain area map developed from the Global Multi-Resolution Terrain Elevation Data (GMTED2010), following the UNEP-WCMC methodology (Ravilious et al. 2021) and a mountain bioclimatic belt map created by the Global Mountain Biodiversity Assessment
 
 Overview of the land cover data
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Land cover refers to the observed physical cover of the Earth’s surface. It includes vegetation and manmade features as well as bare rock, bare soil and inland water surfaces (FAO-GTOS, 2009). The primary units for characterizing land cover are categories (e.g. Forest or Open Water). These categories must be defined following a standardized land cover
 classification in order to identify land cover changes consistently over time.
@@ -125,17 +125,19 @@ Land cover maps developed by relevant national authorities will generally provid
 
 The global default source of land cover data for this indicator is the European Space Agency Climate Change Initiative (ESA-CCI) Land Cover product (ESA, 2017). The ESA-CCI product consists of a series of annual Land Cover maps at 300 m resolution, providing 22 land cover classes based on 300m MERIS, 1km SPOT – VEGETATION, 1km PROBA –V and 1km AVHRR. The ESA CCI adheres to the Cover Classification System of the United Nations Food and Agriculture Organization (UN FAO) (Santoro et al. 2015). Annual updates are currently available from 1992 to 2020. Additional years will be made available by the European Space Agency
 
-Before using QGIS-MGCI-DML 15.4.2 :sub:`beta`
----------------------------------------------
-
-To run this workflow you will need have QGIS 3.20 or a higher version installed in your computer.
+Initial setup
+-------------
+Before using QGIS-MGCI-DML 15.4.2 :sub:`beta` to run this workflow you will need have QGIS 3.20 or a higher version installed in your computer.
 
 We suggest users use the Long-Term Release version  of QGIS to undertake their analysis as this is most stable versions and users are less likely to incur technical difficulties and bugs.  There are various installers depending on your operating system but for most users we recommend the QGIS Standalone Installer. Full instructions are on their website: https://qgis.org/en/site/forusers/download.html#
 
 Whilst the MGCI-DML analysis runs entirely within the QGIS interface, users
 wishing to use QGIS for the MGCI-DML analysis are also required to install R
-software. R scripts can be run from within the QGIS
-interface and an R script will be only be used for calculating real
+software. R scripts can be run from within the QGIS interface and no prior 
+knowledge of R is required.
+
+
+and an R script will be only be used for calculating real
 surface area during the MGCI-DML calculations. Real surface area can be
 calculated using one of the ready to use SAGA tools in the processing
 toolbox, however after initial testing we found the results differed
